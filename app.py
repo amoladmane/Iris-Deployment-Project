@@ -1,26 +1,23 @@
-# import all the packages first
+# Import all the packages
 import streamlit as st
-import pickle
+import pickle 
 import pandas as pd
 import numpy as np
 
-
-# build user interface
+# Build the user interface
 st.set_page_config(page_title="Iris Project", layout='wide')
 
-# Add title of body
-st.title("Iris Project - Amol Admane")
+# Add title to the body
+st.title("Iris Project - Utkarsh Gaikwad")
 
 # Add inputs for user 
-sep_len = st.number_input("Sepal Length : ", min_value=0, step=0.01)
+sep_len = st.number_input("Sepal Length : ", min_value=0.00 , step=0.01)
 sep_wid = st.number_input("Sepal Width : ", min_value=0.00, step=0.01)
 pet_len = st.number_input("Petal Length : ", min_value=0.00, step=0.01)
 pet_wid = st.number_input("Petal Width : ",min_value=0.00, step=0.01)
+
 # Add a button to predict
 submit = st.button("Predict")
-
-
-#logi for prediction button
 
 # Load the preprocessor with pickle
 with open("notebook/pre.pkl", "rb") as file1:
